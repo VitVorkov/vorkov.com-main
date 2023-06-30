@@ -1,95 +1,90 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+"use client";
+
+import { useRouter } from "next/navigation";
+import type { MenuProps } from "antd";
+import { Avatar, Dropdown, Carousel } from "antd";
+import Image from "next/image";
+import styles from "./carousel.module.css";
+import { useState, useEffect } from "react";
 
 export default function Home() {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+
+  const router = useRouter();
+
+  const items: MenuProps["items"] = [
+    {
+      key: "1",
+      label: "About",
+      onClick: async () => {
+        router.push("/about");
+      },
+    },
+    {
+      key: "2",
+      label: "Blog",
+      onClick: async () => {
+        router.push("/blog");
+      },
+      disabled: true,
+    },
+    {
+      key: "3",
+      label: "Projects",
+      onClick: async () => {
+        router.push("projects");
+      },
+      disabled: true,
+    },
+  ];
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
+    <div
+      style={{
+        visibility: !mounted ? "hidden" : "visible",
+        minHeight: "100vh",
+      }}
+    >
+      <Carousel className={styles.carousel}>
         <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+          <Image src={"/assets/00_Childhood.png"} fill alt="Childhood" />
+          <h2 className={styles.childhood}>
+            Tolyatti (Russia) <br></br> 1986 - 2003
+          </h2>
         </div>
-      </div>
+        <div>
+          <Image src={"/assets/01_University.png"} fill alt="University" />
+          <h2 className={styles.university}>
+            Samara (Russia) <br></br> 2003 - 2013
+          </h2>
+        </div>
+        <div>
+          <Image src={"/assets/02_PhD.png"} fill alt="PhD" />
+          <h2 className={styles.phd}>
+            Leuven (Belgium) <br></br> 2013 - 2020
+          </h2>
+        </div>
+        <div>
+          <Image src={"/assets/03_RespiQ.png"} fill alt="RespiQ" />
+          <h2 className={styles.respiq}>
+            Leiden (Holland) <br></br> 2019 - 2023
+          </h2>
+        </div>
+        <div>
+          <Image src={"/assets/04_Future.png"} fill alt="Future" />
+          <h2 className={styles.future}>
+            To be defined <br></br> 2023 onwards
+          </h2>
+        </div>
+      </Carousel>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+      <Dropdown menu={{ items }}>
+        <Avatar
+          src={"/assets/05_Vitalii_midjourney.png"}
+          style={{ position: "absolute", top: "3%", right: "3%" }}
         />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+      </Dropdown>
+    </div>
+  );
 }
