@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Avatar, Dropdown, Typography } from "antd";
 import { useRouter } from "next/navigation";
 import type { MenuProps } from "antd";
+import { MainMenu } from "../../components/menu";
 
 const { Text, Link } = Typography;
 
@@ -38,6 +39,7 @@ export default function About() {
       disabled: true,
     },
   ];
+
   return (
     <div
       style={{
@@ -112,12 +114,7 @@ export default function About() {
             <Avatar src={"/images/08_Ilya_midjourney.png"} size={100} />
           </div>
         </div>
-        <Dropdown menu={{ items }}>
-          <Avatar
-            src={"/images/05_Vitalii_midjourney.png"}
-            style={{ position: "absolute", top: "3%", right: "3%" }}
-          />
-        </Dropdown>
+        <MainMenu items={items}></MainMenu>
       </div>
     </div>
   );

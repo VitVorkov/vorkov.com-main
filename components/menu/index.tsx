@@ -1,3 +1,5 @@
+"use client";
+
 import { FC } from "react";
 import { Dropdown, Avatar } from "antd";
 import { IMainMenuProps } from "./interfaces";
