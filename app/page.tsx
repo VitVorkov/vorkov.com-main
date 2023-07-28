@@ -48,31 +48,31 @@ export default function Home() {
     >
       <Carousel className={styles.carousel}>
         <div>
-          <Image src={"/assets/00_Childhood.png"} fill alt="Childhood" />
+          <Image src={"/images/00_Childhood.png"} fill alt="Childhood" />
           <h2 className={styles.childhood}>
             Tolyatti (Russia) <br></br> 1986 - 2003
           </h2>
         </div>
         <div>
-          <Image src={"/assets/01_University.png"} fill alt="University" />
+          <Image src={"/images/01_University.png"} fill alt="University" />
           <h2 className={styles.university}>
             Samara (Russia) <br></br> 2003 - 2013
           </h2>
         </div>
         <div>
-          <Image src={"/assets/02_PhD.png"} fill alt="PhD" />
+          <Image src={"/images/02_PhD.png"} fill alt="PhD" />
           <h2 className={styles.phd}>
             Leuven (Belgium) <br></br> 2013 - 2020
           </h2>
         </div>
         <div>
-          <Image src={"/assets/03_RespiQ.png"} fill alt="RespiQ" />
+          <Image src={"/images/03_RespiQ.png"} fill alt="RespiQ" />
           <h2 className={styles.respiq}>
             Leiden (Holland) <br></br> 2019 - 2023
           </h2>
         </div>
         <div>
-          <Image src={"/assets/04_Future.png"} fill alt="Future" />
+          <Image src={"/images/04_Future.png"} fill alt="Future" />
           <h2 className={styles.future}>
             To be defined <br></br> 2023 onwards
           </h2>
@@ -81,7 +81,7 @@ export default function Home() {
 
       <Dropdown menu={{ items }}>
         <Avatar
-          src={"/assets/05_Vitalii_midjourney.png"}
+          src={"/images/05_Vitalii_midjourney.png"}
           style={{ position: "absolute", top: "3%", right: "3%" }}
         />
       </Dropdown>

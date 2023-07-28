@@ -37,7 +37,7 @@ export const MainMenu: FC<IMainMenuProps> = ({ items }) => {
   return (
     <Dropdown menu={{ items }}>
       <Avatar
-        src={"/assets/05_Vitalii_midjourney.png"}
+        src={"/images/05_Vitalii_midjourney.png"}
         style={{ position: "absolute", top: "3%", right: "3%" }}
       />
     </Dropdown>
