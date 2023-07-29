@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import type { MenuProps } from "antd";
 import { MainMenu } from "../components/menu";
 import { MainCarousel } from "../components/carousel";
 
