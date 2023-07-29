@@ -8,6 +8,7 @@ import { useRouter } from "next/navigation";
 export const MainMenu: FC<IMainMenuProps> = ({ items }) => {
   const router = useRouter();
 
+  //! Add menu rendering depending on the window.location.pathname
   if (!items) {
     items = [
       {
@@ -39,7 +40,7 @@ export const MainMenu: FC<IMainMenuProps> = ({ items }) => {
   return (
     <Dropdown menu={{ items }}>
       <Avatar
-        src={"/images/05_Vitalii_midjourney.png"}
+        src={"/logo/logo.png"}
         style={{ position: "absolute", top: "3%", right: "3%" }}
       />
     </Dropdown>

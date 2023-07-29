@@ -73,7 +73,7 @@ export default function About() {
               justifyContent: "center",
             }}
           >
-            <Avatar src={"/images/05_Vitalii_midjourney.png"} size={128} />
+            <Avatar src={"/avatars/Vitalii.png"} size={128} />
           </div>
           <br></br>{" "}
           <Text>
@@ -109,9 +109,9 @@ export default function About() {
               justifyContent: "center",
             }}
           >
-            <Avatar src={"/images/06_Kate_midjourney.png"} size={100} />
-            <Avatar src={"/images/07_Alex_midjourney.png"} size={100} />
-            <Avatar src={"/images/08_Ilya_midjourney.png"} size={100} />
+            <Avatar src={"/avatars/Kate.png"} size={100} />
+            <Avatar src={"/avatars/Alex.png"} size={100} />
+            <Avatar src={"/avatars/Ilya.png"} size={100} />
           </div>
         </div>
         <MainMenu items={items}></MainMenu>

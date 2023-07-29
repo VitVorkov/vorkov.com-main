@@ -4,7 +4,7 @@ import { Roboto } from "next/font/google";
 const inter = Roboto({ weight: "400", subsets: ["latin"], display: "swap" });
 
 export const metadata = {
-  title: "Personal page of Vitalii Vorkov",
+  title: "Vitalii Vorkov's personal page",
   description: "Just a little bit about myself",
 };
 
