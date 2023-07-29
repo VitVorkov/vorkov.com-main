@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 export const MainMenu: FC<IMainMenuProps> = ({ items }) => {
   const router = useRouter();
 
-  if (!items) {
+  if (!items && typeof window !== "undefined") {
     items = [];
     let key = 1;
     if (window.location.pathname !== "/") {
