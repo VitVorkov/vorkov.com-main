@@ -58,7 +58,7 @@ export default function About() {
               using Midjourney to create all visuals you'll see here.
             </Paragraph>
             <Paragraph>
-              Feel free to explore some (if any) of my
+              Feel free to explore some (if any) of my{" "}
               <Link href={"/projects"}>projects</Link>. Also, I don't frequently
               delve into personal stories, you can find my occasional{" "}
               <Link href={"/blog"}>posts</Link> in Russian, giving you a glimpse
