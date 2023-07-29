@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import type { MenuProps } from "antd";
 import { MainMenu } from "../../components/menu";
 
-const { Text, Link } = Typography;
+const { Title, Text, Link, Paragraph } = Typography;
 
 export default function About() {
   const [mounted, setMounted] = useState(false);
@@ -41,7 +41,7 @@ export default function About() {
         >
           <div
             style={{
-              paddingTop: "10px",
+              paddingTop: "5px",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -49,44 +49,52 @@ export default function About() {
           >
             <Avatar src={"/avatars/Vitalii.png"} size={128} />
           </div>
-          <br></br>{" "}
-          <Text>
-            {" "}
-            Hi there! My name is Vitalii Vorkov and I am a software and hardware
-            engineer who is in a constant search for innovation. This is my
-            personal page and, as an experiment, I decided to make all pictures
-            for it using Midjourney. Some (if any) of my projects you can find{" "}
-            <Link href={"/projects"}>here</Link>, and I write approximately once
-            in a decade a blog post that you can read{" "}
-            <Link href={"/blog"}>here</Link>, however, the posts are in Russian.{" "}
-          </Text>{" "}
-          <br></br> <br></br>
-          <Text>
-            More information about myself can be found on{" "}
-            <Link href="https://www.linkedin.com/in/vitaliivorkov/">
-              LinkedIn
-            </Link>{" "}
-            and <Link href="https://github.com/VitVorkov">Github</Link>.{" "}
-          </Text>{" "}
-          <br></br> <br></br>
-          <Text>
-            On a personal level, I am a happy husband of Kate and a proud father
-            of Alex and Ilya. Please meet their Midjourney generated avatars
-            below.
-          </Text>{" "}
-          <br></br>
-          <div
-            style={{
-              paddingTop: "10px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <Avatar src={"/avatars/Kate.png"} size={100} />
-            <Avatar src={"/avatars/Alex.png"} size={100} />
-            <Avatar src={"/avatars/Ilya.png"} size={100} />
-          </div>
+          <Typography>
+            <Title level={4}>Welcome!</Title>
+            <Paragraph>
+              I am Vitalii Vorkov, a passionate software and hardware engineer
+              constantly driven by the pursuit of innovative ideas. This website
+              is a personal experiment where I've taken the creative step of
+              using Midjourney to create all visuals you'll see here.
+            </Paragraph>
+            <Paragraph>
+              Feel free to explore some (if any) of my
+              <Link href={"/projects"}>projects</Link>. Also, I don't frequently
+              delve into personal stories, you can find my occasional{" "}
+              <Link href={"/blog"}>posts</Link> in Russian, giving you a glimpse
+              into my life beyond the engineering projects.
+            </Paragraph>
+            <Paragraph>
+              For a more in-depth look at my professional journey feel free to
+              connect with me on{" "}
+              <Link href="https://www.linkedin.com/in/vitaliivorkov/">
+                LinkedIn
+              </Link>{" "}
+              or explore my contributions on{" "}
+              <Link href="https://github.com/VitVorkov">Github</Link>.{" "}
+            </Paragraph>
+            <Paragraph>
+              On a personal note, I am a happy husband of Kate and a proud
+              father of Alex and Ilya. Here are their charming
+              Midjourney-generated avatars:
+            </Paragraph>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                paddingBottom: "10px",
+              }}
+            >
+              <Avatar src={"/avatars/Kate.png"} size={100} />
+              <Avatar src={"/avatars/Alex.png"} size={100} />
+              <Avatar src={"/avatars/Ilya.png"} size={100} />
+            </div>
+            <Paragraph>
+              Thank you for visiting my personal page! Let's make exciting
+              things together!
+            </Paragraph>
+          </Typography>
         </div>
         <MainMenu></MainMenu>
       </div>
