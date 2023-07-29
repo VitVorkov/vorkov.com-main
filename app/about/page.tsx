@@ -14,32 +14,6 @@ export default function About() {
 
   const router = useRouter();
 
-  const items: MenuProps["items"] = [
-    {
-      key: "1",
-      label: "Main",
-      onClick: async () => {
-        router.push("/");
-      },
-    },
-    {
-      key: "2",
-      label: "Blog",
-      onClick: async () => {
-        router.push("/blog");
-      },
-      disabled: true,
-    },
-    {
-      key: "3",
-      label: "Projects",
-      onClick: async () => {
-        router.push("projects");
-      },
-      disabled: true,
-    },
-  ];
-
   return (
     <div
       style={{
@@ -114,7 +88,7 @@ export default function About() {
             <Avatar src={"/avatars/Ilya.png"} size={100} />
           </div>
         </div>
-        <MainMenu items={items}></MainMenu>
+        <MainMenu></MainMenu>
       </div>
     </div>
   );

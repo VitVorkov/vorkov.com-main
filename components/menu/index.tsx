@@ -8,33 +8,51 @@ import { useRouter } from "next/navigation";
 export const MainMenu: FC<IMainMenuProps> = ({ items }) => {
   const router = useRouter();
 
-  //! Add menu rendering depending on the window.location.pathname
   if (!items) {
-    items = [
-      {
-        key: "1",
+    items = [];
+    let key = 1;
+    if (window.location.pathname !== "/") {
+      items.push({
+        key: key.toString(),
+        label: "Main",
+        onClick: async () => {
+          router.push("/");
+        },
+      });
+      key++;
+    }
+    if (window.location.pathname !== "/about") {
+      items.push({
+        key: key.toString(),
         label: "About",
         onClick: async () => {
           router.push("/about");
         },
-      },
-      {
-        key: "2",
+      });
+      key++;
+    }
+    if (window.location.pathname !== "/blog") {
+      items.push({
+        key: key.toString(),
         label: "Blog",
         onClick: async () => {
           router.push("/blog");
         },
         disabled: true,
-      },
-      {
-        key: "3",
+      });
+      key++;
+    }
+    if (window.location.pathname !== "/projects") {
+      items.push({
+        key: key.toString(),
         label: "Projects",
         onClick: async () => {
-          router.push("projects");
+          router.push("/projects");
         },
         disabled: true,
-      },
-    ];
+      });
+      key++;
+    }
   }
 
   return (

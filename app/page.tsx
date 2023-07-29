@@ -12,32 +12,6 @@ export default function Home() {
 
   const router = useRouter();
 
-  const items: MenuProps["items"] = [
-    {
-      key: "1",
-      label: "About",
-      onClick: async () => {
-        router.push("/about");
-      },
-    },
-    {
-      key: "2",
-      label: "Blog",
-      onClick: async () => {
-        router.push("/blog");
-      },
-      disabled: true,
-    },
-    {
-      key: "3",
-      label: "Projects",
-      onClick: async () => {
-        router.push("projects");
-      },
-      disabled: true,
-    },
-  ];
-
   return (
     <div
       style={{
@@ -46,7 +20,7 @@ export default function Home() {
       }}
     >
       <MainCarousel></MainCarousel>
-      <MainMenu items={items}></MainMenu>
+      <MainMenu></MainMenu>
     </div>
   );
 }
