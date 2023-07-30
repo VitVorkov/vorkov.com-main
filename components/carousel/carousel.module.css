@@ -14,6 +14,10 @@
   position: relative;
 }
 
+.carousel :global .slick-dots {
+  bottom: 12.5%;
+}
+
 .carousel :global .slick-slide img {
   margin: auto;
   object-fit: cover;
