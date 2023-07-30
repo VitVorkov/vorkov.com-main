@@ -1,9 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Avatar, Dropdown, Typography } from "antd";
+import { Avatar, Typography } from "antd";
 import { useRouter } from "next/navigation";
-import type { MenuProps } from "antd";
 import { MainMenu } from "../../components/menu";
 
 const { Title, Text, Link, Paragraph } = Typography;
@@ -61,8 +60,8 @@ export default function About() {
               Feel free to explore some (if any) of my{" "}
               <Link href={"/projects"}>projects</Link>. Also, I don't frequently
               delve into personal stories, you can find my occasional{" "}
-              <Link href={"/blog"}>posts</Link> in Russian, giving you a glimpse
-              into my life beyond the engineering projects.
+              <Link href={"https://blog.vorkov.com"}>posts</Link> in Russian,
+              giving you a glimpse into my life beyond the engineering projects.
             </Paragraph>
             <Paragraph>
               For a more in-depth look at my professional journey feel free to

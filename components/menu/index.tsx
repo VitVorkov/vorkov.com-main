@@ -31,17 +31,14 @@ export const MainMenu: FC<IMainMenuProps> = ({ items }) => {
       });
       key++;
     }
-    if (window.location.pathname !== "/blog") {
-      items.push({
-        key: key.toString(),
-        label: "Blog",
-        onClick: async () => {
-          router.push("/blog");
-        },
-        disabled: true,
-      });
-      key++;
-    }
+    items.push({
+      key: key.toString(),
+      label: "Blog",
+      onClick: async () => {
+        router.push("https://blog.vorkov.com");
+      },
+    });
+    key++;
     if (window.location.pathname !== "/projects") {
       items.push({
         key: key.toString(),
@@ -60,6 +57,7 @@ export const MainMenu: FC<IMainMenuProps> = ({ items }) => {
       <Avatar
         src={"/logo/logo.png"}
         style={{ position: "absolute", top: "3%", right: "3%" }}
+        size={48}
       />
     </Dropdown>
   );
