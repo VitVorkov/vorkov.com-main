@@ -7,7 +7,7 @@ import styles from "./carousel.module.css";
 
 export const MainCarousel: FC = () => {
   return (
-    <Carousel className={styles.carousel}>
+    <Carousel className={styles.carousel} autoplay>
       <div>
         <Image src={"/carousel/childhood.png"} fill alt="Childhood" />
         <h2 className={styles.childhood}>
