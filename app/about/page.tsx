@@ -2,16 +2,13 @@
 
 import { useState, useEffect } from "react";
 import { Avatar, Typography } from "antd";
-import { useRouter } from "next/navigation";
 import { MainMenu } from "../../components/menu";
 
-const { Title, Text, Link, Paragraph } = Typography;
+const { Title, Link, Paragraph } = Typography;
 
 export default function About() {
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
-
-  const router = useRouter();
 
   return (
     <div
@@ -57,7 +54,7 @@ export default function About() {
               using Midjourney to create all visuals you'll see here.
             </Paragraph>
             <Paragraph>
-              Feel free to explore some (if any) of my{" "}
+              Feel free to explore some of my{" "}
               <Link href={"/projects"}>projects</Link>. Also, I don't frequently
               delve into personal stories, you can find my occasional{" "}
               <Link href={"https://blog.vorkov.com"}>posts</Link> in Russian,
@@ -95,8 +92,8 @@ export default function About() {
             </Paragraph>
           </Typography>
         </div>
-        <MainMenu></MainMenu>
       </div>
+      <MainMenu></MainMenu>
     </div>
   );
 }

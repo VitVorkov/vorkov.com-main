@@ -46,7 +46,7 @@ export const MainMenu: FC<IMainMenuProps> = ({ items }) => {
         onClick: async () => {
           router.push("/projects");
         },
-        disabled: true,
+        disabled: false,
       });
       key++;
     }
